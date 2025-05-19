@@ -1,0 +1,6 @@
+ip: "172.19.68.143"
+user: "mjpeg"
+password: "mjpeg2000"
+resolution: "2688x1520"
+fps: 5
+stream_url: "rtsp://mjpeg:mjpeg2000@172.19.68.143:554/cam/realmonitor?channel=1&subtype=0"
