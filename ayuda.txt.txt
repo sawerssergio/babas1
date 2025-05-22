@@ -1,6 +1,0 @@
-Acción	Comando
-Crear entorno virtual	python -m venv venv
-Activar entorno	.\venv\Scripts\activate
-Desactivar entorno	deactivate
-Congelar dependencias	pip freeze > requirements.txt
-Instalar desde requirements	pip install -r requirements.txt

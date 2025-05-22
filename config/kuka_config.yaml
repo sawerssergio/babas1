@@ -1,5 +1,0 @@
-# Configuración del robot KUKA
-ip: "172.19.68.144"
-port: 7000
-default_z: 1200.0  # Altura predeterminada en mm
-max_speed: 50      # Velocidad porcentual (0-100)
