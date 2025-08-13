@@ -1,15 +1,22 @@
-import express from 'express';
-import productsRouter from './routes/products.js';
-import salesRouter from './routes/sales.js';
-import usersRouter from './routes/users.js';
+import http from 'http';
+import { handleProducts } from './routes/products.js';
+import { handleSales } from './routes/sales.js';
+import { handleUsers } from './routes/users.js';
 
-const app = express();
-app.use(express.json());
-app.use('/api/products', productsRouter);
-app.use('/api/sales', salesRouter);
-app.use('/api/users', usersRouter);
+const server = http.createServer((req, res) => {
+  if (req.url.startsWith('/api/products')) {
+    handleProducts(req, res);
+  } else if (req.url.startsWith('/api/sales')) {
+    handleSales(req, res);
+  } else if (req.url.startsWith('/api/users')) {
+    handleUsers(req, res);
+  } else {
+    res.statusCode = 404;
+    res.end('Not found');
+  }
+});
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
