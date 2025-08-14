@@ -1,0 +1,11 @@
+{
+  "name": "inventario-ventas-backend",
+  "version": "0.1.0",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "node -e \"console.log('No tests yet')\""
+  },
+  "dependencies": {}
+}
